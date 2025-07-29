@@ -1,0 +1,1014 @@
+/* Reset and Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    line-height: 1.6;
+    
+    color: #222222;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* Header Styles */
+.site-header {
+    background-color: #222222;
+    padding: 20px 0;
+}
+.site-header .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align everything to the left */
+    gap: 20px;
+    padding-left: 20px; /* Optional: adds some spacing from the edge */
+}
+
+#logo {
+    height: 80px;
+      margin-left: 100px; /* Moves right by 30px */
+}
+
+.main-nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    gap: 100px;
+}
+.main-nav ul {
+  transform: translateX(-150px); /* ⬅ Try -10px to -30px */
+}
+
+.main-nav a {
+    color: #c78b07;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 10px 15px;
+    border-radius: px;
+
+    transition: all 0.3s;
+    font-size: 1.1rem;
+}
+
+.main-nav a.active {
+    background-color: #c78b07;
+    color: #222222;
+}
+
+.main-nav a:hover {
+    background-color: rgba(199, 139, 7, 0.2);
+}
+
+.search-item {
+    margin-left: -15px;
+}
+
+.search-bar {
+    display: flex;
+    width: 200px;
+}
+
+.search-bar input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 4px 0 0 4px;
+    font-size: 1rem;
+}
+
+.search-bar button {
+    width: 400px;
+    background-color: #222222;
+    border: 2px solid #c78b07;
+    border-radius: 0 4px 4px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 0;
+}
+
+.search-bar button span {
+    color: #c78b07;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.hero-section {
+  background-image: url('../images/main-banner.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 75vh;
+  min-height: 550px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 0;
+}
+
+.wrapper {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-overlay-box {
+  background-color: rgba(0, 0, 0, 0.4);  /* Black transparent */
+  width: 90%;
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 28px 40px;
+  box-sizing: border-box;
+}
+
+.hero-text-box {
+  color: white;
+  text-align: left;
+}
+
+.hero-text-box h1 {
+  font-size: 4rem;
+  color: white;
+  line-height: 1.1;
+  margin: 0 0 20px -15px; /* Top Right Bottom Left */
+  padding: 0;
+  text-align: left;
+  letter-spacing: -0.5px; /* Tighten if needed */
+}
+
+/* Wrap the top line: "Welcome to Three Star" */
+.line-top {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+/* Style only "Star" */
+.star-word {
+  color: #f6f5f2; /* yellow */
+  font-style: normal;
+  font-weight: 700;
+  margin-left: 6px;
+  font-size: 3.8rem;
+}
+
+/* Style "Media" on next line */
+.media-word {
+  display: block;
+  font-size: 3.8rem;
+  color: white;
+  font-weight: 700;
+  line-height: 1.6;
+  margin-top: 5px;
+}
+
+
+
+.hero-text-box p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  white-space: normal;
+  max-width: 1000px;
+  /* NEW LEFT-ALIGNMENT PROPERTIES */
+  padding: 1px 10px;
+  text-align: left;
+  position: relative;
+  left: -120px; /* Adjust this value to move left */
+}
+
+/* Button Styles */
+.button {
+  display: inline-flex;
+  align-items: center;
+  background-color: #c78b07;
+  color: black;
+  font-weight: 600;
+  padding: 28px 25px;
+  text-decoration: none;
+  font-size: 1.3rem;
+  transition: background-color 0.3s;
+  border: none;
+ 
+}
+.hero-text-box h1{
+  position: relative;
+  left: -110px; /* Same left shift for both */
+  margin-left: 0; /* Remove default margins */
+}
+.button:hover {
+  background-color: #a36d05;
+}
+
+.button .material-symbols-outlined {
+  margin-left: 8px;
+  font-size: 1.2rem;
+}
+ .button {
+  left: -100px; /* Reduced from -110px */
+  /* Alternative: Use smaller increments */
+  transform: translateX(-30px); /* More precise control */
+}
+.about-section {
+    padding: 60px 100;
+    background-color: #ffe6ac;
+}
+/* Zero-risk version */
+.button .material-symbols-outlined {
+  font-variation-settings: 'FILL' 1, 'wght' 700, 'GRAD' 200, 'opsz' 24;
+  display: inline-block; /* Prevents line-height issues */
+  font-size: 1.4em; /* Relative to button text */
+  margin-left: 8px;
+  vertical-align: middle;
+}
+/* Paragraph spacing */
+.about-content p {
+  margin-bottom: 1rem; /* Space between lines within paragraphs */
+}
+
+.about-content .paragraph-gap {
+  margin-top: 1rem; /* Extra space before this paragraph */
+  margin-bottom: 0;
+  font-size: 1rem;
+  font-weight: 400;
+}
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.about-section img {
+  width: 50%; /* Adjust percentage (40-60% recommended) */
+  max-width: 600px; /* Optional: Set maximum size */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 0px; /* Keep your rounded corners */
+  box-shadow: none; /* Keep existing shadow */
+  margin-right: -30px;
+}
+
+
+.flex-container img {
+    width: 100%;
+    border-radius: 1px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.about-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: -1px;
+    font-weight: 700;
+    color: #222222;
+}
+
+.about-content p {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.7;
+    color: #222222;
+}
+
+/* Add these styles to your existing CSS */
+.service-content {
+  background-color: #ffe6ac; /* Yellow background for text area */
+ padding: 10px 20px 30px 10px; /* more bottom padding for space under button */
+  flex-grow: 1;
+  display: flex;
+  position: relative; /* Needed for absolute positioning if used */
+  margin-top: auto; /* Pushes content up, leaving space at bottom */
+  padding-bottom: 30px; /* Adjust this value as needed */
+ flex-direction: column;
+}
+.service-content {
+  justify-content: space-between; /* Pushes button to bottom */
+  min-height: 30px; /* Set minimum height for consistent spacing */
+}
+.service-image {
+  background-color: #ffe6ac; /* Ensures image area stays white */
+}
+.service-row:first-child .service-content {
+  padding-bottom: -10px; /* Less padding at bottom */
+   height: auto; /* Remove fixed height if any */
+  padding-bottom: 15px; /* Reduce bottom padding */
+
+}
+.service-row:first-child .dark-button {
+  padding: 50px 10px;  /* Increased from 12px 20px */
+  font-size: 1.1rem;   /* Larger text if needed */
+    margin-top: 5px; /* Reduce from original value (default was likely 15-20px) */
+  margin-bottom: 30px; /* Optional: Reduce space below button if needed */
+}
+
+.service-row:last-child .service-card {
+  margin-bottom: -5px; 
+}
+
+/* Button styles remain unchanged but included for clarity */
+.dark-button {
+  background-color: #222; /* Black button */
+  color: white; /* White text */
+  border: none;
+  padding: 28px 20px;
+  border-radius: 1px;
+  font-weight: 600;
+  text-align: center;
+  margin-top: auto; /* Pushes button to bottom */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 1.4rem;
+   margin-top: auto; 
+}
+.service-row:last-child .service-content {
+  padding-bottom: 20px; /* Adds space below content */
+  min-height: 200px; /* Increases yellow box height */
+}
+/* Push buttons down in second row */
+.service-row:last-child .dark-button {
+  margin-top: 20px; /* Pushes to bottom */
+  margin-bottom: 10px; /* Space below button */
+}
+.dark-button:hover {
+  background-color: #333; /* Slightly lighter on hover */
+}
+
+/* Grid layout adjustments */
+.services-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.service-card h3 {
+  font-size: 2em; /* Increase from default (likely 1.4rem) */
+  line-height: 1.2;
+  margin-bottom: 15px;
+}
+.service-row {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+}
+.services-section h2 {
+  font-size: 2.5rem; /* You can increase this size as needed */
+  font-weight: bold;
+}
+/* First row - 2 equal cards */
+.service-row:first-child .service-card {
+  flex: 1;
+    height: 25%; /* Smaller height */
+
+}
+
+/* Second row - 3 equal cards */
+.service-row:last-child .service-card {
+  flex: 1;
+}
+/* Standard arrow styling for all buttons */
+.dark-button .material-symbols-outlined {
+  font-family: 'Material Symbols Outlined';
+  font-variation-settings:
+    'FILL' 100,
+    'wght' 700,
+    'GRAD' 200,
+    'opsz' 48;
+  font-size: 1.2rem;
+  margin-left: 8px;
+  vertical-align: middle;
+  transition: transform 0.2s ease;
+}
+
+/* First row buttons (Digital & Marketing) */
+.service-row:first-child .dark-button .material-symbols-outlined {
+  font-size: 1.4rem; /* Slightly larger */
+}
+.service-row:first-child .dark-button {
+  margin-left: auto;
+  margin-right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 40px;    /* Increase button size */
+  font-size: 1.6rem;
+  min-width: 550px;
+  height: 80px;
+  border-radius: 1px;
+}
+.service-row:first-child .dark-button {
+  transform: translateX(5px); /* moves the button 15px to the right */
+}
+
+.service-row:last-child .dark-button {
+  margin-left: auto;
+  margin-right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1px 2px;    /* Increase button size */
+  font-size: 1.6rem;
+  min-width: 360px;
+  height: 80px;
+  border-radius: 1px;
+  transform: translateX(5px); /* moves the button 5px to the right */
+}
+/* Hover effect for all */
+.dark-button:hover .material-symbols-outlined {
+  transform: translateX(3px);
+}
+
+.service-card {
+  background-color: white;
+  border-radius: 2px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  border-radius: 1px;
+}
+
+.service-image img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+
+
+/* Vision Section - Fixed and Responsive */
+.vision-section {
+    background-image: url('../images/vision.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 280%; /* Make image height fit the container */
+    background-position: center;
+    padding: 60px 20px; /* Smaller height */
+    position: relative;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+    max-width: 1800px;
+    margin: 0 auto;
+    height: 250px; 
+    text-align: left;/* Adjust height here */
+}
+
+
+.vision-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+   
+    z-index: 1;
+}
+
+.vision-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: -900px 100px 900px 200px;  /* Top | Right | Bottom | Left */
+    text-align: left;
+    margin-top: -70px;
+}
+
+.vision-content h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.vision-content p {
+    margin-bottom: 8px;
+    line-height: 1.3;
+    font-size: 0.9rem;
+}
+.vision-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 25px 20px;
+  background-color: #222;
+  color: white;
+  border-radius: 0px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  background-color: #122137;
+  border-radius: 4px;
+ border: 1px solid #c78b07;
+  white-space: nowrap; /* Prevents text wrap */
+}
+
+.vision-button span {
+  display: inline; /* Make sure span behaves like inline */
+}
+.vision-button {
+  transform: translateX(-3px); /* move right by 40px */
+}
+.vision-arrow {
+  font-size: 1.4rem; /* Arrow icon size */
+}
+/* Vision button arrow specific styles */
+.material-symbols-outlined.vision-arrow {
+  font-variation-settings: 
+    'FILL' 1,
+    'wght' 700,
+    'GRAD' 200,
+    'opsz' 48;
+  font-size: 2.5rem;
+  margin-left: 8px;
+  transition: transform 0.2s ease;
+  vertical-align: middle;
+}
+
+/* Slide arrow on vision-button hover */
+.vision-button:hover .vision-arrow {
+  transform: translateX(3px);
+}
+
+/* Team Section */
+.team-section {
+    padding: 1px 0;
+}
+
+.team-section h2 {
+    font-size: 3rem;
+      margin-left: 14px;  /* Moves right by 30px */
+    display: inline-block; /* Allows precise positioning */
+    position: relative; /* For fine adjustments */
+    left: 13px; /* Additional slight nudge */
+    font-weight: 800;
+    color: #222222;
+}
+    .team-members {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+}
+
+.team-member {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+.team-member:first-child .member-info {
+    width: 100%; /* Same width */
+    max-width: 1000px; /* Same max-width */
+    padding: 35px; /* Same padding */
+    right: 100%; /* Position from right */
+    bottom: 8%; /* Same vertical position */
+    margin-left: -70px; /* Same left margin */
+    margin-right: 660%;
+    background-color: #ffe6ac; /* Ensure background matches */
+}
+.team-member:first-child .member-image {
+    margin-left: -9px; /* Match second member's left shift */
+    width: 100%; /* Match width */
+}
+.team-member:first-child .member-image img {
+    height: 400px; /* Same height */
+    width: 100%; /* Full width of container */
+    margin-right: 100px; /* Same right pull */
+    margin-left: -1px; /* Same left adjustment */
+    object-fit: cover; /* Maintain aspect ratio */
+}
+.team-member.reverse {
+    flex-direction: column;
+}
+
+.member-image {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 0; /* No gap between the two images */
+    flex: 60px 0 90px; /* Total width for two 300px-wide images */
+}
+
+.member-image img {
+    width: 65%; /* Each image takes half the container width */
+    height: 100px; /* 4:3 aspect ratio based on 300px width per image */
+    object-fit: cover;
+    display: block;
+     position: relative;
+    left: 40px;
+}
+
+/* Keep original positioning for second member */
+.team-member:nth-child(2) .member-image {
+     margin-left: 53px; /* Match second member's left shift */
+    width: 100%; /* Match width */
+    margin-right: -10px;
+}
+
+.team-member:nth-child(2) .member-image img {
+    height: 400px; /* Same height */
+    width: 80%; /* Full width of container */
+    margin-right: 100px; /* Same right pull */
+    margin-left: -95.5px; /* Same left adjustment */
+    
+   
+}
+
+
+.team-member:nth-child(2) .member-info {
+    height: auto; /* Allow vertical expansion */
+    min-height: 200px; /* Minimum height */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distributes content */
+    padding: 51px;
+    right: 5px;
+    margin-left: 30px;
+    bottom: 100%;
+    width: 1%; /* Keep original width */
+    max-width: 670px;
+
+}
+
+
+.member-info {
+    background-color: #ffe6ac;
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.member-info h3 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+    font-weight: 800;
+    color: #222222;
+}
+
+.member-info h4 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+    color: #222222;
+}
+
+.title-divider {
+    height: 3px;
+    background-color: #c78b07;
+    width: 500px;
+    margin-bottom: 20px;
+}
+
+.member-info p {
+    line-height: 1.7;
+    color: #222222;
+    font-size: 1.05rem;
+    flex-grow: 1;
+}
+
+/* Contact Section */
+.contact-section {
+    margin-top: -60px;  /* Negative margin pulls up */
+    padding-top: 20px;  /* Maintains internal spacing */
+    position: relative; /* Helps with stacking */
+     padding: 60px 0;      /* Keeps above other elements */
+}
+.contact-section h2 {
+    font-size: 3rem;
+    margin-bottom: 35px;
+    font-weight: 800;
+    color: #222222;
+     margin-right: 15%;  /* Push further right */
+    position: relative; /* For fine adjustments */
+    right: -25px;       /* Nudge more right if needed */
+}
+
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 35px;
+    margin-bottom: 35px;
+}
+
+/* Updated: Removed grey background from contact form */
+.contact-form {
+    padding: 30px;
+    border-radius: 8px;
+    background-color: transparent;
+}
+
+.contact-form h3 {
+    font-size: 1.6rem;
+    margin-bottom: 25px;
+    font-weight: 800;
+    color: #222222;
+}
+
+.form-group {
+    margin-bottom: 12px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 1px;
+    font-weight: 600;
+    color: #222222;
+    font-size: 1.1rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 8px 15px;
+    border: 1px solid #0c0c0c;
+    border-radius: 3px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1rem;
+}
+
+.form-group textarea {
+    min-height: 150px;
+    resize: none;
+}
+
+.send-button-container {
+    margin-top: -1px; /* Pulls up */
+    text-align: right; /* Aligns button to right */
+}
+/* Ultra-Tight Send Button - No border, tight spacing, proper "Send" capitalization */
+.send-button {
+    background-color: #222222;
+    color: #c78b07;
+    border: none; /* Removed border */
+    font-weight: 40;
+    padding: 1px 1px; /* Very tight padding */
+    font-size: 1.9rem;
+    border-radius: 0px; /* Smaller radius */
+    cursor: pointer;
+    transition: all 0.2s;
+    text-transform: capitalize; /* Makes "Send" instead of "SEND" */
+    letter-spacing: normal;
+    display: flex;
+    width: auto;
+    min-width: 0;
+    margin-left: 30px;
+     margin-top: 30px;    /* Moves button down */
+  margin-bottom: 60px; /* Moves button up by pushing content below it */
+    text-align: right;
+    box-sizing: content-box;
+    line-height: 1.2;
+    
+}
+
+.send-button:hover {
+    background-color: #c78b07;
+    color: #222222;
+}
+
+/* Send Button Label */
+.form-group button[type="submit"] + label {
+    display: block;
+    margin-top: 4px;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    color: #222222;
+}
+
+/* Updated: Location section map same size as contact form */
+.location {
+  width: 100%;           /* full container width */
+  max-width: 600px;      /* optional max width */
+  margin: 10px auto;     /* center horizontally */
+  height: auto;          /* height adjusts by iframe */
+}
+
+
+.location h3 {
+    font-size: 1.9rem;
+    margin-bottom: 25px;
+    font-weight: 800;
+    color: #222222;
+}
+
+.location iframe {
+    width: 100%;
+    height: 500px; /* Matches contact form height */
+    border: none;
+    border-radius: 8px;
+}
+
+/* Hours of Operation Section */
+.hours {
+    width: 100%;
+    margin: 50px 0 -65px;
+}
+  
+.hours-heading {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    font-weight: 800;
+    color: #222222;
+    text-align: left;
+}
+
+.hours-table {
+    width: 100%;
+    min-width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    margin: 0 auto; /* Center the table */
+}
+
+.hours-table th,
+.hours-table td {
+    border: 2px solid #222222;
+    padding: 20px;
+      box-sizing: border-box; /* Increased vertical padding */
+    text-align: left;
+    font-size: 1.2rem; /* Slightly larger text */
+    height: 60px; /* Fixed minimum height for each row */
+}
+
+.hours-table th {
+    background-color: #ffe6ac;
+    font-weight: 700;
+    color: #222222;
+    width: 50%;
+     vertical-align: middle; /* Center text vertically */
+}
+
+
+.hours-table td {
+    width: 50%;
+    vertical-align: middle; /* Center text vertically */
+    font-weight: 600; /* Make hours text slightly bolder */
+}
+
+/* Footer */
+.site-footer {
+    background-color: #222222;
+    padding: 30px 0;
+}
+
+.site-footer .wrapper {
+    text-align: left;
+     max-width: 100%;
+    overflow: hidden; /* Prevents content from causing overflow */
+    padding: 0 20px; /* Adds some breathing room */
+    box-sizing: border-box;
+}
+
+.site-footer p {
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #c78b07;
+}
+.underline-yellow {
+  border-bottom: 0.5px solid #c78b07; /* yellow line */
+  display: inline-block;
+  line-height: 1;
+  padding-bottom: 0; /* remove space under */
+  margin-bottom: -3px; /* pulls line closer */
+}
+
+
+.site-footer a {
+    color: #c78b07;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.site-footer a:hover {
+    color: #ffe6ac;
+}
+
+/* Desktop Styles */
+@media (min-width: 768px) {
+    .site-header .wrapper {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 0;
+    }
+
+    .main-nav ul {
+        gap: 30px;
+    }
+
+    .hero-text-box {
+        width: 55%;
+        margin-left: 8%;
+    }
+
+    .hero-text-box h1 {
+        font-size: 3.2rem;
+    }
+
+    .flex-container {
+        flex-direction: row;
+        align-items: center;
+        gap: 50px;
+    }
+    @media (max-width: 768px) {
+  .hero-text-box h1,
+  .hero-text-box .button,
+  .hero-text-box p {
+    left: 0; /* Reset on mobile */
+    margin-left: 0;
+    max-width: 100%;
+  }
+}
+
+    .flex-container img {
+        width: 45%;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .team-member {
+        flex-direction: row;
+
+    }
+        .team-member:first-child .member-info {
+        right: auto; /* Remove right positioning */
+        left: 900%; /* Position from left */
+        margin-right: 1000%; /* Remove right margin */
+    }
+}
+.team-member:nth-child(2) .member-info {
+        right: 10%; /* Slightly more margin on mobile */
+        width: 80%; /* Wider on small screens */
+    }
+
+    .team-member.reverse {
+        flex-direction: row-reverse;
+    }
+
+    .member-image {
+        flex: 500 0 700px; /* Total width for two 350px-wide images */
+    }
+
+    .member-image img {
+        height: 300px; /* 4:3 aspect ratio based on 350px width per image */
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    /* Make map same height as form on desktop */
+   .location iframe {
+    width: 100%;
+    height: 500px; /* Increased height for rectangular shape */
+    border: none;
+    border-radius: 8px;
+    aspect-ratio: 16/9; /* Optional: maintains rectangular proportion */
+}
+@media (min-width: 1024px) {
+    .hero-text-box h1 {
+        font-size: 3.5rem;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .services-grid::after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+
+    .services-grid .service-card.small-card {
+        float: left;
+        width: calc(33.333% - 20px);
+        margin-right: 30px;
+    }
+
+    .services-grid .service-card.small-card:nth-child(3n) {
+        margin-right: 0;
+    }
+
+    .vision-content {
+        margin-left: 8%;
+    }
+}
