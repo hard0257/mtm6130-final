@@ -121,7 +121,7 @@ body {
   position: absolute;
   inset: 0;
   background-color: rgba(0, 0, 0, 0.4);
-  z-index: 0;
+  z-index: 1;
 }
 
 .wrapper {
@@ -132,16 +132,17 @@ body {
 }
 
 .hero-overlay-box {
-  background-color: rgba(0, 0, 0, 0.4);  /* Black transparent */
-  width: 90%;
+  background-color: rgba(0, 0, 0, 0.5);  /* Black transparent */
+  width: 100%;
   max-width: 1040px;
-  margin: 0 auto;
-  padding: 28px 40px;
+  margin: -2px 1000px -10px 100px; /* Top Right Bottom Left */
+  height: 90%;
+  padding: 2px -4px -40px 4px; /* Top Right Bottom Left */
   box-sizing: border-box;
 }
 
 .hero-text-box {
-  color: white;
+  color: rgb(202, 193, 193);
   text-align: left;
 }
 
@@ -149,12 +150,16 @@ body {
   font-size: 4rem;
   color: white;
   line-height: 1.1;
-  margin: 0 0 20px -15px; /* Top Right Bottom Left */
-  padding: 0;
+  margin: 0 0 2px -15px; /* Top Right Bottom Left */
+  padding: 10px 10px 6px 0; /* Top Right Bottom Left */
   text-align: left;
   letter-spacing: -0.5px; /* Tighten if needed */
 }
-
+.hero-text-box h1 {
+  left: -100px; /* Reduced from -110px */
+  /* Alternative: Use smaller increments */
+  transform: translateX(40px); /* More precise control */
+}
 /* Wrap the top line: "Welcome to Three Star" */
 .line-top {
   display: inline-block;
@@ -201,8 +206,8 @@ body {
   align-items: center;
   background-color: #c78b07;
   color: black;
-  font-weight: 600;
-  padding: 28px 25px;
+  font-weight: 00;
+  padding: 30px 15px;
   text-decoration: none;
   font-size: 1.3rem;
   transition: background-color 0.3s;
@@ -223,9 +228,9 @@ body {
   font-size: 1.2rem;
 }
  .button {
-  left: -100px; /* Reduced from -110px */
+  left: -110px; /* Reduced from -110px */
   /* Alternative: Use smaller increments */
-  transform: translateX(-30px); /* More precise control */
+  transform: translateX(40px); /* More precise control */
 }
 .about-section {
     padding: 60px 100;
@@ -244,6 +249,11 @@ body {
   margin-bottom: 1rem; /* Space between lines within paragraphs */
 }
 
+#hero .button {
+  position: relative; /* ensure left/top work */
+  
+  top: -15px;         /* move up 20px */
+}
 .about-content .paragraph-gap {
   margin-top: 1rem; /* Extra space before this paragraph */
   margin-bottom: 0;
@@ -733,9 +743,9 @@ body {
 
 .form-group input,
 .form-group textarea {
-    width: 110%;
-    padding: 5px 15px;
-    border: 1.5px solid #0c0c0c;
+    width: 100%;
+    padding: 8px 15px;
+    border: 1px solid #0c0c0c;
     border-radius: 3px;
     font-family: "Open Sans", sans-serif;
     font-size: 1rem;
@@ -743,9 +753,7 @@ body {
 
 .form-group textarea {
     min-height: 150px;
-    height: 10px;
-    resize: none; /* Prevents resizing */
-  
+    resize: none;
 }
 
 .send-button-container {
@@ -810,7 +818,7 @@ body {
 
 .location iframe {
     width: 100%;
-    height: 500px; /* Matches contact form height */
+    height: 350px; /* Matches contact form height */
     border: none;
     border-radius: 8px;
 }
