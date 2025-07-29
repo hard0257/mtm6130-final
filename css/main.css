@@ -11,7 +11,9 @@ body {
     
     color: #222222;
 }
-
+body, html {
+  overflow-x: hidden;
+}
 .wrapper {
     width: 100%;
     max-width: 1200px;
