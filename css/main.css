@@ -733,9 +733,9 @@ body {
 
 .form-group input,
 .form-group textarea {
-    width: 100%;
-    padding: 8px 15px;
-    border: 1px solid #0c0c0c;
+    width: 110%;
+    padding: 5px 15px;
+    border: 1.5px solid #0c0c0c;
     border-radius: 3px;
     font-family: "Open Sans", sans-serif;
     font-size: 1rem;
@@ -743,7 +743,9 @@ body {
 
 .form-group textarea {
     min-height: 150px;
-    resize: none;
+    height: 10px;
+    resize: none; /* Prevents resizing */
+  
 }
 
 .send-button-container {
