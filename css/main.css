@@ -1092,8 +1092,8 @@ body, html {
     }
       .star-word,
   .media-word {
-    font-size: 0.9em; /* smaller text */
-    font-weight: normal; /* remove bold */
+    font-size: 1em; /* smaller text */
+    
   }
     /* Center everything in the header */
     .site-header .wrapper {
