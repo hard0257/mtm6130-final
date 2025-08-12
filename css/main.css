@@ -1092,7 +1092,7 @@ body, html {
     }
       .star-word,
   .media-word {
-    font-size: 1em; /* smaller text */
+    font-size: 0.9em; /* smaller text */
     font-weight: normal; /* remove bold */
   }
     /* Center everything in the header */
