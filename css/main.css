@@ -1,9 +1,3 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
-html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
@@ -16,244 +10,268 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 }
-/* HTML5 display-role reset for older browsers */
+
+
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
-	display: block;
+    display: block;
 }
+
+
 body {
-	line-height: 1;
+    line-height: 1;
 }
+
+
 ol, ul {
-	list-style: none;
+    list-style: none;
 }
 blockquote, q {
-	quotes: none;
+    quotes: none;
 }
 blockquote:before, blockquote:after,
 q:before, q:after {
-	content: '';
-	content: none;
+    content: '';
+    content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}/* Make everything sit right */
+    border-collapse: collapse;
+    border-spacing: 0;
+}
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-/* Text style for whole page */
+/* Main text styles for the whole site */
 body {
-    font-family: "Open Sans", sans-serif;
-    line-height: 1.6;
-    color: #222222;
+    font-family: "Open Sans", sans-serif;  /* Clean, modern font */
+    line-height: 1.6;                      /* Nice readable spacing */
+    color: #222222;                        /* Dark gray text */
 }
-/* No side scrolling */
+
+/* Prevent annoying horizontal scrolling */
 body, html {
   overflow-x: hidden;
 }
 
-/* Center everything inside this */
+/* 
+   Wrapper class - centers everything nicely 
+   (Our trusty container for all page content)
+*/
 .wrapper {
     width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px 0;
+    max-width: 1200px;   /* Won't get too wide on big screens */
+    margin: 0 auto;      /* Auto margins center the container */
+    padding: 20px 0;     /* Some breathing room */
 }
 
-/* Top black bar */
+/* 
+   Header styles - that sleek black bar at the top 
+   (Makes us look professional AF)
+*/
 .site-header {
-    background-color: #222222;
-    padding: 20px 0;
+    background-color: #222222;  /* Classic black */
+    padding: 20px 0;            /* Top/bottom padding */
 }
-/* Header stuff layout */
+
+/* Header layout - flexbox makes life easy */
 .site-header .wrapper {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 20px;
-    padding-left: 20px;
+    gap: 20px;                  /* Space between logo and nav */
+    padding-left: 20px;         /* Push from left edge */
 }
 
-/* Logo pic size and spot */
+/* Logo styling - our brand mark */
 #logo {
-    height: 80px;
-    margin-left: 100px;
+    height: 80px;               /* Big enough to see */
+    margin-left: 100px;         /* Push it right a bit */
 }
 
-/* Menu bar setup */
+/* 
+   Navigation menu - where people find their way around 
+   (Flexbox makes this responsive without headaches)
+*/
 .main-nav ul {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap;            /* Wraps on small screens */
     justify-content: center;
     align-items: center;
     list-style: none;
-    gap: 100px;
+    gap: 100px;                 /* Space between menu items */
 }
-/* Move menu left a bit */
+
+/* 
+   Menu positioning tweak 
+   (Designer wanted it shifted left for some reason)
+*/
 .main-nav ul {
   transform: translateX(-150px);
 }
 
-/* Menu links gold color */
+/* Menu links - that sweet gold color */
 .main-nav a {
-    color: #c78b07;
-    text-decoration: none;
-    font-weight: 600;
-    padding: 10px 15px;
-    border-radius: 1px;
-    transition: all 0.3s;
-    font-size: 1.1rem;
+    color: #c78b07;             /* Gold accent color */
+    text-decoration: none;      /* No ugly underlines */
+    font-weight: 600;           /* Slightly bold */
+    padding: 10px 15px;         /* Clickable area */
+    border-radius: 1px;         /* Slightly rounded corners */
+    transition: all 0.3s;       /* Smooth hover effects */
+    font-size: 1.1rem;          /* Slightly larger text */
 }
 
-/* Current page menu button */
+/* Current page indicator */
 .main-nav a.active {
-    background-color: #c78b07;
-    color: #222222;
+    background-color: #c78b07;   /* Gold background */
+    color: #222222;             /* Dark text for contrast */
 }
 
-/* Menu hover effect */
+/* Hover effect - subtle highlight */
 .main-nav a:hover {
-    background-color: rgba(199, 139, 7, 0.2);
+    background-color: rgba(199, 139, 7, 0.2);  /* Semi-transparent gold */
 }
 
-/* Search box position */
+/* Search box positioning */
 .search-item {
-    margin-left: -15px;
+    margin-left: -15px;         /* Nudges it left a bit */
 }
 
-/* Search bar box */
+/* Search bar container */
 .search-bar {
     display: flex;
-    width: 200px;
+    width: 200px;               /* Reasonable width */
 }
 
-/* Search typing area */
+/* Search input field */
 .search-bar input {
-    flex: 1;
-    padding: 10px;
-    border: none;
-    border-radius: 4px 0 0 4px;
-    font-size: 1rem;
+    flex: 1;                    /* Takes remaining space */
+    padding: 10px;              /* Comfortable typing area */
+    border: none;               /* Clean look */
+    border-radius: 4px 0 0 4px; /* Rounded left side */
+    font-size: 1rem;            /* Normal text size */
 }
 
-/* Search button */
+/* Search button styling */
 .search-bar button {
-    width: 400px;
-    background-color: #222222;
-    border: 2px solid #c78b07;
-    border-radius: 0 4px 4px 0;
+    width: 400px;               /* Big click target */
+    background-color: #222222;   /* Matches header */
+    border: 2px solid #c78b07;  /* Gold border */
+    border-radius: 0 4px 4px 0; /* Rounded right side */
     display: flex;
     align-items: center;
     justify-content: center;
-    cursor: pointer;
-    padding: 0;
+    cursor: pointer;            /* Shows it's clickable */
+    padding: 0;                 /* Tight layout */
 }
 
-/* Search icon */
+/* Search icon inside button */
 .search-bar button span {
-    color: #c78b07;
-    font-size: 30px;
-    font-weight: 400;
+    color: #c78b07;             /* Gold icon */
+    font-size: 30px;            /* Big enough to see */
+    font-weight: 400;           /* Normal weight */
 }
 
-/* Big picture at top */
+/* 
+   Hero section - that big banner at the top 
+   (First impression matters, right?)
+*/
 .hero-section {
-  background-image: url('../images/main-banner.jpg');
-  background-size: cover;
-  background-position: center;
-  height: 75vh;
-  min-height: 550px;
+  background-image: url('../images/main-banner.jpg');  /* Background image */
+  background-size: cover;        /* Covers entire area */
+  background-position: center;   /* Centers the image */
+  height: 75vh;                 /* 75% of viewport height */
+  min-height: 550px;            /* But never too small */
   display: flex;
-  align-items: center;
-  position: relative;
-  overflow: hidden;
+  align-items: center;          /* Centers content vertically */
+  position: relative;           /* For overlay positioning */
+  overflow: hidden;             /* Just in case */
 }
 
-/* Dark layer on big picture */
+/* Dark overlay for better text readability */
 .hero-section::before {
   content: '';
   position: absolute;
-  inset: 0;
-  background-color: rgba(0, 0, 0, 0.1);
-  z-index: 1;
+  inset: 0;                     /* Covers entire area */
+  background-color: rgba(0, 0, 0, 0.1);  /* Slightly dark */
+  z-index: 1;                   /* Stays between bg and text */
 }
 
-/* Text box on big picture */
+/* Text box overlay */
 .hero-overlay-box {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.5);  /* Semi-transparent black */
   width: 100%;
-  max-width: 1040px;
-  margin: -30px 1000px -10px 100px;
+  max-width: 1040px;            /* Reasonable max width */
+  margin: -30px 1000px -10px 100px;  /* Positioning magic */
   height: 100%;
-  padding: 2px -4px 40px 4px;
-  box-sizing: border-box;
+  padding: 2px -4px 40px 4px;   /* Padding tweaks */
+  box-sizing: border-box;        /* Includes padding in width */
 }
 
-/* Text color on big picture */
+/* Hero text container */
 .hero-text-box {
-  color: white;
-  text-align: left;
+  color: white;                 /* White text on dark bg */
+  text-align: left;             /* Left-aligned text */
 }
 
-/* Big title text */
+/* Main headline - big and bold */
 .hero-text-box h1 {
-  font-size: 4rem;
+  font-size: 4rem;              /* HUGE text */
   color: white;
-  line-height: 1.1;
-  margin: 0 0 2px -15px;
+  line-height: 1.1;             /* Tight spacing */
+  margin: 0 0 2px -15px;        /* Margin adjustments */
   padding: 10px 10px 6px 0;
   text-align: left;
-  letter-spacing: -0.5px;
+  letter-spacing: -0.5px;       /* Slightly tighter letters */
 }
-/* Move title left */
+
+/* Position tweak for headline */
 .hero-text-box h1 {
   left: -100px;
   transform: translateX( 130px);
 }
 
-/* First line of title */
+/* First line of headline */
 .line-top {
   display: inline-block;
-  white-space: nowrap;
+  white-space: nowrap;          /* Prevents line break */
 }
 
-/* "STAR" word style */
+/* "STAR" word special styling */
 .star-word {
-  color: #f6f5f2;
+  color: #f6f5f2;              /* Off-white */
   font-style: normal;
-  font-weight: 700;
-  margin-left: 6px;
-  font-size: 3.8rem;
+  font-weight: 500;            
+  margin-left: 6px;            /* Small gap */
+  font-size: 3.8rem;           /* Slightly smaller */
 }
 
-/* "MEDIA" word style */
+/* "MEDIA" word styling */
 .media-word {
-  display: block;
-  font-size: 3.8rem;
+  display: block;              /* On its own line */
+  font-size: 3.8rem;           /* Big text */
   color: white;
-  font-weight: 700;
-  line-height: 1.6;
-  margin-top: 5px;
+  font-weight: 500;            
+  line-height: 1.6;            /* Spacing */
+  margin-top: 5px;             /* Gap from previous line */
 }
 
-/* Small text under title */
+/* Hero section paragraph */
 .hero-text-box p {
-  font-size: 1rem;
-  line-height: 1.6;
-  margin-bottom: 30px;
-  white-space: normal;
-  max-width: 1000px;
+  font-size: 1rem;             /* Normal text size */
+  line-height: 1.6;            /* Readable spacing */
+  margin-bottom: 30px;         /* Space before button */
+  white-space: normal;         /* Allows line breaks */
+  max-width: 1000px;           /* Prevents too long lines */
   padding: 10px 10px;
   text-align: left;
   position: relative;
@@ -263,230 +281,256 @@ body, html {
  transform: translateX(140px);
 }
 
-/* Gold button */
+/* 
+   Button styles - our gold call-to-action 
+   (Gotta make people click this thing)
+*/
 .button {
   display: inline-flex;
   align-items: center;
-  background-color: #c78b07;
-  color: black;
- 
-  padding: 30px 15px;
-  text-decoration: none;
-  font-size: 1.3rem;
-  transition: background-color 0.3s;
+  background-color: #c78b07;    /* Gold color */
+  color: black;                 /* Dark text */
+  padding: 30px 15px;           /* Big click area */
+  text-decoration: none;        /* No underline */
+  font-size: 1.3rem;            /* Larger text */
+  transition: background-color 0.3s;  /* Smooth color change */
   border: none;
 }
-/* Button position fix */
+
+/* Button position adjustment */
 .hero-text-box h1{
   position: relative;
   left: -110px;
   margin-left: 0;
 }
-/* Button hover color */
+
+/* Hover effect - darker gold */
 .button:hover {
   background-color: #a36d05;
 }
 
-/* Button arrow */
+/* Button arrow icon */
 .button .material-symbols-outlined {
-  margin-left: 8px;
-  font-size: 1.2rem;
+  margin-left: 8px;             /* Space from text */
+  font-size: 1.2rem;            /* Matches button text */
 }
-/* Button move left */
+
+/* Button positioning */
 .button {
   left: -110px;
   transform: translateX(130px);
 }
 
-/* About us section */
+/* 
+   About Us section - who we are 
+   (With that nice yellow background)
+*/
 .about-section {
     padding: 60px 100;
-    background-color: #ffe6ac;
+    background-color: #ffe6ac;  /* Light gold/yellow */
      margin-left: 10px;
 }
-/* About title position */
+
+/* About title positioning */
 .about-section h2 {
   margin-left: 20;     
   margin-top: 0;    
   transform: translateY(-40px);
   transform: translateX(10px);
 }
+
 /* Button icon setup */
 .button .material-symbols-outlined {
   font-variation-settings: 'FILL' 1, 'wght' 700, 'GRAD' 200, 'opsz' 24;
   display: inline-block;
-  font-size: 2em;
-  margin-left: 8px;
-  vertical-align: middle;
+  font-size: 2em;               /* Larger icon */
+  margin-left: 8px;             /* Space from text */
+  vertical-align: middle;       /* Aligns with text */
 }
 
-/* Space under paragraphs */
+/* Paragraph spacing */
 .about-content p {
-  margin-bottom: 1rem;
-   margin-left: 10px;
+  margin-bottom: 1rem;          /* Space between paragraphs */
+   margin-left: 10px;           /* Small indent */
 }
 
-/* Hero button spot */
+/* Hero button positioning */
 #hero .button {
   position: relative;
-  top: -15px;
+  top: -15px;                   /* Nudged up a bit */
 }
-/* Extra space between text */
+
+/* Extra space for specific paragraph */
 .about-content .paragraph-gap {
-  margin-top: 4rem;
-  margin-bottom: 0;
+  margin-top: 4rem;             /* Big gap above */
+  margin-bottom: 0;             /* No gap below */
   font-size: 1rem;
   font-weight: 400;
 }
 
-/* Flexbox container */
+/* Flex container for layout */
 .flex-container {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 30px;                  /* Space between items */
 }
-/* About us image */
+
+/* About us image styling */
 .about-section img {
-  width: 50%;
-  max-width: 500px;
-  height: auto;
-  border-radius: 0px;
-  box-shadow: none;
-  margin-right: -30px;
-  margin-left: 50px; 
+  width: 50%;                   /* Half width */
+  max-width: 500px;             /* But never too big */
+  height: auto;                 /* Keeps proportions */
+  border-radius: 0px;           /* Square edges */
+  box-shadow: none;             /* Flat design */
+  margin-right: -30px;          /* Negative margin for overlap */
+  margin-left: 50px;            /* Push from left */
 }
 
 /* Images in flexbox */
 .flex-container img {
-    width: 100%;
-    border-radius: 1px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;                /* Full container width */
+    border-radius: 1px;         /* Slightly rounded */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  /* Subtle shadow */
 }
 
-/* About title */
+/* About section heading */
 .about-content h2 {
-    font-size: 2.5rem;
-    margin-bottom: -1px;
-    font-weight: 700;
-    color: #222222;
+    font-size: 2.5rem;          /* Big text */
+    margin-bottom: -1px;        /* Tight spacing */
+    font-weight: 700;           /* Bold */
+    color: #222222;             /* Dark gray */
 }
 
-/* About text */
+/* About section text */
 .about-content p {
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.7;
-    color: #222222;
+    font-size: 1rem;            /* Normal text size */
+    font-weight: 400;           /* Normal weight */
+    line-height: 1.7;           /* Comfortable spacing */
+    color: #222222;             /* Dark gray */
 }
 
-/* Services box */
+/* 
+   Services section - what we offer 
+   (Also with that yellow background)
+*/
 .service-content {
-  background-color: #ffe6ac;
-  padding: 10px 20px 30px 10px;
-  flex-grow: 1;
+  background-color: #ffe6ac;    /* Light gold/yellow */
+  padding: 10px 20px 30px 10px; /* Padding inside */
+  flex-grow: 1;                 /* Fills available space */
   display: flex;
   position: relative;
   margin-top: auto;
-  padding-bottom: 30px;
-  flex-direction: column;
+  padding-bottom: 30px;         /* Bottom padding */
+  flex-direction: column;       /* Stack items vertically */
 }
+
 /* Services layout */
 .service-content {
-  justify-content: space-between;
-  min-height: 30px;
+  justify-content: space-between;  /* Space distribution */
+  min-height: 30px;               /* Minimum height */
 }
-/* Service image area */
+
+/* Service image container */
 .service-image {
-  background-color: #ffe6ac;
+  background-color: #ffe6ac;      /* Same as section */
 }
+
 /* First service padding */
 .service-row:first-child .service-content {
   padding-bottom: -10px;
   height: auto;
   padding-bottom: 15px;
 }
+
 /* First service button */
 .service-row:first-child .dark-button {
-  padding: 50px 10px;
-  font-size: 1.1rem;
-  margin-top: 5px;
-  margin-bottom: 30px;
+  padding: 50px 10px;            /* Big click area */
+  font-size: 1.1rem;             /* Text size */
+  margin-top: 5px;               /* Small gap */
+  margin-bottom: 30px;           /* Big gap below */
 }
 
 /* Last service card */
 .service-row:last-child .service-card {
-  margin-bottom: -5px;
+  margin-bottom: -5px;           /* Nudge up */
 }
 
-/* Black button */
+/* 
+   Dark button - our black call-to-action 
+   (Contrasts nicely with gold)
+*/
 .dark-button {
-  background-color: #222;
-  color: white;
+  background-color: #222;        /* Dark background */
+  color: white;                  /* White text */
   border: none;
-  padding: 28px 20px;
-  border-radius: 1px;
-  font-weight: 600;
+  padding: 28px 20px;            /* Big click area */
+  border-radius: 1px;            /* Square corners */
+  font-weight: 600;              /* Semi-bold */
   text-align: center;
-  margin-top: auto;
+  margin-top: auto;              /* Pushes to bottom */
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
-  font-size: 1.4rem;
-  margin-top: auto;
+  gap: 8px;                      /* Space between items */
+  font-size: 1.4rem;             /* Larger text */
 }
+
 /* Last service content */
 .service-row:last-child .service-content {
-  padding-bottom: 20px;
-  min-height: 200px;
+  padding-bottom: 20px;          /* Bottom padding */
+  min-height: 200px;             /* Minimum height */
 }
 
 /* Last service button */
 .service-row:last-child .dark-button {
-  margin-top: 20px;
-  margin-bottom: 10px;
-}
-/* Button hover */
-.dark-button:hover {
-  background-color: #333;
+  margin-top: 20px;              /* Gap above */
+  margin-bottom: 10px;           /* Gap below */
 }
 
-/* Services grid */
+/* Dark button hover effect */
+.dark-button:hover {
+  background-color: #333;        /* Slightly lighter black */
+}
+
+/* Services grid layout */
 .services-grid {
   display: flex;
-  flex-direction: column;
-  gap: 20px;
+  flex-direction: column;        /* Stack services vertically */
+  gap: 20px;                     /* Space between services */
 }
-/* Service title */
+
+/* Service card title */
 .service-card h3 {
-  font-size: 2em;
-  line-height: 1.2;
-  margin-bottom: 15px;
+  font-size: 2em;                /* Big text */
+  line-height: 1.2;              /* Tight spacing */
+  margin-bottom: 15px;           /* Gap below */
 }
-/* Service row */
+
+/* Service row layout */
 .service-row {
   display: flex;
-  gap: 20px;
-  width: 100%;
+  gap: 20px;                     /* Space between cards */
+  width: 100%;                   /* Full width */
 }
-/* Services heading */
+
+/* Services section heading */
 .services-section h2 {
-  font-size: 2.5rem;
-  font-weight: bold;
+  font-size: 2.5rem;             /* Big text */
+  font-weight: bold;              /* Bold */
 }
 
-/* First service card */
+/* First service card sizing */
 .service-row:first-child .service-card {
-  flex: 1;
-  height: 25%;
+  flex: 1;                       /* Flexible width */
+  height: 25%;                   /* Relative height */
 }
 
-/* Last service card */
+/* Last service card sizing */
 .service-row:last-child .service-card {
-  flex: 1;
+  flex: 1;                       /* Flexible width */
 }
 
-/* Button arrow setup  for video plan, web plans, and print plans*/
+/* Button arrow icons */
 .dark-button .material-symbols-outlined {
   font-family: 'Material Symbols Outlined';
   font-variation-settings:
@@ -494,83 +538,88 @@ body, html {
     'wght' 700,
     'GRAD' 200,
     'opsz' 48;
-  font-size: 3rem;
-  margin-left: 8px;
-  vertical-align: middle;
-  transition: transform 0.2s ease;
+  font-size: 3rem;               /* Large icon */
+  margin-left: 8px;              /* Space from text */
+  vertical-align: middle;        /* Aligns with text */
+  transition: transform 0.2s ease;  /* Smooth movement */
 }
 
 /* First service button arrow */
 .service-row:first-child .dark-button .material-symbols-outlined {
-  font-size: 3rem;
+  font-size: 3rem;               /* Large icon */
 }
+
 /* First service button */
 .service-row:first-child .dark-button {
-  font-size: 1.6rem;
-   height: 80px;
-  border-radius: 1px;
+  font-size: 1.6rem;             /* Text size */
+   height: 80px;                 /* Fixed height */
+  border-radius: 1px;            /* Square corners */
 }
-/* Button position */
+
+/* First service button position */
 .service-row:first-child .dark-button {
-  transform: translateX(5px);
+  transform: translateX(5px);    /* Nudge right */
 }
 
 /* Last service button */
 .service-row:last-child .dark-button {
-  margin-left: auto;
+  margin-left: auto;             /* Push right */
   margin-right: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1px 2px;
-  font-size: 1.6rem;
-  min-width: 360px;
-  height: 100px;
-  border-radius: 1px;
-  transform: translateX(5px);
+  padding: 1px 2px;             /* Tight padding */
+  font-size: 1.6rem;            /* Text size */
+  min-width: 360px;             /* Minimum width */
+  height: 100px;                /* Fixed height */
+  border-radius: 1px;           /* Square corners */
+  transform: translateX(5px);   /* Nudge right */
 }
 
-/* Button arrow move on hover */
+/* Arrow moves right on hover */
 .dark-button:hover .material-symbols-outlined {
-  transform: translateX(3px);
+  transform: translateX(3px);    /* Small movement */
 }
 
-/* Service card look */
+/* Service card styling */
 .service-card {
-  background-color: rgb(184, 37, 37);
-  border-radius: 2px;
-  overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: rgb(184, 37, 37);  /* Temporary color */
+  border-radius: 2px;            /* Slightly rounded */
+  overflow: hidden;              /* Keeps content contained */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Subtle shadow */
   display: flex;
-  flex-direction: column;
-  border-radius: 1px;
+  flex-direction: column;        /* Stack items vertically */
+  border-radius: 1px;            /* Square corners */
 }
 
-/* Service image size */
+/* Service image sizing */
 .service-image img {
-  width: 100%;
-  height: 400px;
-  object-fit: cover;
+  width: 100%;                   /* Full width */
+  height: 400px;                 /* Fixed height */
+  object-fit: cover;             /* Crops to fit */
 }
 
-/* Vision section */
+/* 
+   Vision section - our big picture 
+   (With that cool background image)
+*/
 .vision-section {
-    background-image: url('../images/vision.jpg');
-    background-repeat: no-repeat;
-    background-size: 100% 280%;
-    background-position: center;
-    padding: 60px 20px;
-    position: relative;
-    text-align: center;
-    color: white;
-    overflow: hidden;
-    max-width: 1800px;
-    margin: 0 auto;
-    height: 250px;
-    text-align: left;
+    background-image: url('../images/vision.jpg');  /* BG image */
+    background-repeat: no-repeat;  /* No tiling */
+    background-size: 100% 280%;    /* Zoomed in */
+    background-position: center;   /* Centered */
+    padding: 60px 20px;           /* Inner spacing */
+    position: relative;           /* For overlay */
+    text-align: center;           /* Center text */
+    color: white;                 /* White text */
+    overflow: hidden;             /* No scroll */
+    max-width: 1800px;            /* Max width */
+    margin: 0 auto;               /* Centered */
+    height: 250px;                /* Fixed height */
+    text-align: left;             /* Left text */
 }
 
-/* Dark overlay */
+/* Dark overlay for readability */
 .vision-section::before {
     content: '';
     position: absolute;
@@ -578,636 +627,679 @@ body, html {
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: 1;
+    z-index: 1;                   /* Between bg and text */
 }
 
-/* Vision text box */
+/* Vision text container */
 .vision-content {
-    position: relative;
+    position: relative;           /* Above overlay */
     z-index: 2;
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: -900px 100px 900px 200px;
-    text-align: left;
-    margin-top: -70px;
+    max-width: 1000px;            /* Reasonable width */
+    margin: 0 auto;               /* Centered */
+    padding: -900px 100px 900px 200px;  /* Padding tweaks */
+    text-align: left;             /* Left-aligned */
+    margin-top: -70px;            /* Nudge up */
 }
 
 /* Vision heading */
 .vision-content h2 {
-    font-size: 2rem;
-    margin-bottom: 15px;
-    font-weight: 700;
+    font-size: 2rem;              /* Big text */
+    margin-bottom: 15px;          /* Space below */
+    font-weight: 700;             /* Bold */
 }
 
-/* Vision text */
+/* Vision paragraph */
 .vision-content p {
-    margin-bottom: 8px;
-    line-height: 1.3;
-    font-size: 0.9rem;
+    margin-bottom: 8px;           /* Space between paragraphs */
+    line-height: 1.3;             /* Tight spacing */
+    font-size: 0.9rem;            /* Slightly smaller */
 }
+
 /* Vision button */
 .vision-button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
-  padding: 25px 20px;
-  background-color: #222;
-  color: white;
-  border-radius: 0px;
-  text-decoration: none;
-  font-size: 1.2rem;
-  background-color: #122137;
-  border-radius: 4px;
-  border: 1px solid #c78b07;
-  white-space: nowrap;
+  gap: 8px;                       /* Space between items */
+  padding: 25px 20px;             /* Clickable area */
+  background-color: #222;         /* Dark background */
+  color: white;                   /* White text */
+  border-radius: 0px;             /* Square corners */
+  text-decoration: none;          /* No underline */
+  font-size: 1.2rem;              /* Text size */
+  background-color: #122137;      /* Dark blue */
+  border-radius: 4px;             /* Slightly rounded */
+  border: 1px solid #c78b07;      /* Gold border */
+  white-space: nowrap;            /* No line breaks */
 }
 
 /* Button text */
 .vision-button span {
   display: inline;
 }
+
 /* Button position */
 .vision-button {
-  transform: translateX(-3px);
-}
-/* Button arrow */
-.vision-arrow {
-  font-size: 1.4rem;
+  transform: translateX(-3px);    /* Nudge left */
 }
 
-/* Arrow icon setup */
+/* Button arrow */
+.vision-arrow {
+  font-size: 1.4rem;              /* Icon size */
+}
+
+/* Arrow icon styling */
 .material-symbols-outlined.vision-arrow {
   font-variation-settings: 
     'FILL' 1,
     'wght' 700,
     'GRAD' 200,
     'opsz' 48;
-  font-size: 2.5rem;
-  margin-left: 8px;
-  transition: transform 0.2s ease;
-  vertical-align: middle;
+  font-size: 2.5rem;              /* Large icon */
+  margin-left: 8px;               /* Space from text */
+  transition: transform 0.2s ease;  /* Smooth movement */
+  vertical-align: middle;         /* Aligns with text */
 }
 
-/* Arrow move on hover */
+/* Arrow moves right on hover */
 .vision-button:hover .vision-arrow {
-  transform: translateX(3px);
+  transform: translateX(3px);     /* Small movement */
 }
 
-/* Team section */
+/* 
+   Team section - meet the crew 
+   (Showcasing TEAM beautiful faces)
+*/
 .team-section {
-    padding: 1px 0;
+    padding: 1px 0;               /* Minimal padding */
 }
 
 /* Team heading */
 .team-section h2 {
-    font-size: 3rem;
-    margin-left: 14px;
+    font-size: 3rem;              /* Big text */
+    margin-left: 14px;            /* Small indent */
     display: inline-block;
     position: relative;
-    left: 13px;
-    font-weight: 900;
-    color: #222222;
+    left: 13px;                   /* Nudge right */
+    font-weight: 900;             /* Extra bold */
+    color: #222222;               /* Dark gray */
 }
+
 /* Team members grid */
 .team-members {
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 0;
+    grid-template-columns: 1fr;   /* Single column */
+    gap: 0;                       /* No gaps */
 }
 
-/* Each team member */
+/* Individual team member */
 .team-member {
     display: flex;
-    flex-direction: column;
-    gap: 0;
+    flex-direction: column;       /* Stack items */
+    gap: 0;                       /* No gaps */
 }
+
 /* First member info box */
 .team-member:first-child .member-info {
     width: 100%;
-    max-width: 1000px;
-    padding: 30px;
+    max-width: 1000px;            /* Reasonable max */
+    padding: 30px;                /* Inner spacing */
     right: 100%;
     bottom: 8%;
-    margin-left: 10px;
-    margin-right: 1%;
-    background-color: #ffe6ac;
-}
-/* First member image */
-.team-member:first-child .member-image {
-    margin-left: -9px;
-    width: 100%;
-}
-/* First member pic size */
-.team-member:first-child .member-image img {
-    height: 400px;
-    width: 100%;
-    margin-right: 100px;
-    margin-left: -1px;
-    object-fit: cover;
-}
-/* Reversed layout */
-.team-member.reverse {
-    flex-direction: column;
+    margin-left: 10px;            /* Small indent */
+    margin-right: 1%;             /* Tiny gap */
+    background-color: #ffe6ac;    /* Light gold */
 }
 
-/* Member pic container */
+/* First member image */
+.team-member:first-child .member-image {
+    margin-left: -9px;            /* Nudge left */
+    width: 100%;                  /* Full width */
+}
+
+/* First member image sizing */
+.team-member:first-child .member-image img {
+    height: 400px;                /* Fixed height */
+    width: 100%;                  /* Full width */
+    margin-right: 100px;          /* Push left */
+    margin-left: -1px;            /* Nudge left */
+    object-fit: cover;            /* Crops to fit */
+}
+
+/* Reversed layout for alternate members */
+.team-member.reverse {
+    flex-direction: column;        /* Stack items */
+}
+
+/* Member image container */
 .member-image {
     display: flex;
-    flex-wrap: nowrap;
-    gap: 0;
+    flex-wrap: nowrap;            /* No wrapping */
+    gap: 0;                       /* No gaps */
     flex: 60px 0 90px;
 }
 
-/* Member pic style */
+/* Member image styling */
 .member-image img {
-    width: 65%;
-    height: 100px;
-    object-fit: cover;
+    width: 65%;                   /* Partial width */
+    height: 100px;                /* Small height */
+    object-fit: cover;            /* Crops to fit */
     display: block;
     position: relative;
-    left: 40px;
+    left: 40px;                   /* Push right */
 }
 
-/* Second member pic */
+/* Second member image container */
 .team-member:nth-child(2) .member-image {
-    margin-left: 100px;
-    width: 100%;
-    margin-right: -685px;
+    margin-left: 100px;           /* Big indent */
+    width: 100%;                  /* Full width */
+    margin-right: -685px;         /* Pull left */
 }
 
-/* Second member pic size */
+/* Second member image sizing */
 .team-member:nth-child(2) .member-image img {
-    height: 400px;
-    width: 48.3%;
-    margin-right: 100px;
-    margin-left: -140.5px;
+    height: 400px;                /* Fixed height */
+    width: 48.3%;                 /* Partial width */
+    margin-right: 100px;          /* Push left */
+    margin-left: -140.5px;        /* Pull right */
 }
 
-/* Second member info */
+/* Second member info box */
 .team-member:nth-child(2) .member-info {
     height: auto;
-    min-height: 200px;
+    min-height: 200px;            /* Minimum height */
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    padding: 51px;
+    justify-content: space-between;  /* Space distribution */
+    padding: 51px;                /* Inner spacing */
     right: 1px;
-    margin-left: 30px;
+    margin-left: 30px;            /* Indent */
     bottom: 100%;
     width: 100%;
-    max-width: 670px;
+    max-width: 670px;             /* Reasonable max */
 }
 
-/* Member info box */
+/* Member info container */
 .member-info {
-    background-color: #ffe6ac;
-    padding: 20px;
-    flex: 1;
+    background-color: #ffe6ac;    /* Light gold */
+    padding: 20px;                /* Inner spacing */
+    flex: 1;                      /* Fills space */
     display: flex;
-    flex-direction: column;
+    flex-direction: column;       /* Stack items */
 }
 
 /* Member name */
 .member-info h3 {
-    font-size: 1.6rem;
-    margin-bottom: 10px;
-    font-weight: 800;
-    color: #222222;
+    font-size: 1.6rem;            /* Big text */
+    margin-bottom: 10px;          /* Space below */
+    font-weight: 800;             /* Extra bold */
+    color: #222222;               /* Dark gray */
 }
 
 /* Member job title */
 .member-info h4 {
-    font-size: 1.2rem;
-    margin-bottom: 15px;
-    font-weight: 900;
-    color: #222222;
+    font-size: 1.2rem;            /* Medium text */
+    margin-bottom: 15px;          /* Space below */
+    font-weight: 900;             /* Ultra bold */
+    color: #222222;               /* Dark gray */
 }
 
-/* Gold line under title */
+/* Gold divider line */
 .title-divider {
-    height: 3px;
-    background-color: #c78b07;
-    width: 500px;
-    margin-bottom: 20px;
+    height: 3px;                  /* Thick line */
+    background-color: #c78b07;    /* Gold color */
+    width: 500px;                 /* Fixed width */
+    margin-bottom: 20px;          /* Space below */
 }
 
 /* Member description */
 .member-info p {
-    line-height: 1.7;
-    color: #222222;
-    font-size: 1.3rem;
-    flex-grow: 1;
-    font-weight: 550;
+    line-height: 1.7;             /* Comfortable spacing */
+    color: #222222;               /* Dark gray */
+    font-size: 1.3rem;            /* Slightly larger */
+    flex-grow: 1;                 /* Fills space */
+    font-weight: 550;             /* Semi-bold */
 }
 
-/* Contact section */
+/* 
+   Contact section - reach out to us 
+   (Because we're friendly people)
+*/
 .contact-section {
-    margin-top: -60px;
-    padding-top: 20px;
+    margin-top: -60px;            /* Overlaps previous section */
+    padding-top: 20px;            /* Top padding */
     position: relative;
-    padding: 60px 0;
+    padding: 60px 0;              /* Vertical padding */
 }
+
 /* Contact heading */
 .contact-section h2 {
-    font-size: 3rem;
-    margin-bottom: 35px;
-    font-weight: 800;
-    color: #222222;
-    margin-right: 15%;
+    font-size: 3rem;              /* Big text */
+    margin-bottom: 35px;          /* Space below */
+    font-weight: 800;             /* Extra bold */
+    color: #222222;               /* Dark gray */
+    margin-right: 15%;            /* Right margin */
     position: relative;
-    right: -25px;
+    right: -25px;                 /* Nudge right */
 }
 
 /* Contact grid layout */
 .contact-grid {
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 35px;
-    margin-bottom: 80px;
+    grid-template-columns: 1fr;   /* Single column */
+    gap: 35px;                    /* Space between items */
+    margin-bottom: 80px;          /* Space below */
 }
 
-/* Contact form */
+/* Contact form styling */
 .contact-form {
-    padding: 30px;
-    border-radius: 8px;
-    background-color: transparent;
+    padding: 30px;                /* Inner spacing */
+    border-radius: 8px;           /* Slightly rounded */
+    background-color: transparent; /* No background */
 }
+
 /* Form width */
 .contact-form {
-  width: 200%;      
-  max-width: 700px;  
-  margin: 0 auto; 
-  border-radius: 2px;
-}
-/* Form heading */
-.contact-form h3 {
-    font-size: 2rem;
-    margin-bottom: 25px;
-    font-weight: 800;
-    color: #222222;
+  width: 100%;                    
+  max-width: 700px;               /* But not too wide */
+  margin: 0 auto;                 /* Centered */
+  border-radius: 2px;             /* Square corners */
 }
 
-/* Form group */
+/* Form heading */
+.contact-form h3 {
+    font-size: 2rem;              /* Big text */
+    margin-bottom: 25px;          /* Space below */
+    font-weight: 800;             /* Extra bold */
+    color: #222222;               /* Dark gray */
+}
+
+/* Form group container */
 .form-group {
-    margin-bottom: 12px;
+    margin-bottom: 12px;          /* Space between fields */
 }
 
 /* Form labels */
 .form-group label {
-    display: block;
-    margin-bottom: 1px;
-    font-weight: 600;
-    color: #222222;
-    font-size: 1.1rem;
+    display: block;               /* On its own line */
+    margin-bottom: 1px;           /* Tight spacing */
+    font-weight: 600;             /* Semi-bold */
+    color: #222222;               /* Dark gray */
+    font-size: 1.1rem;            /* Slightly larger */
 }
 
 /* Form inputs */
 .form-group input,
 .form-group textarea {
-    width: 100%;
-    padding: 8px 15px;
-    border: 1px solid #0c0c0c;
-    border-radius: 3px;
-    font-family: "Open Sans", sans-serif;
-    font-size: 1rem;
+    width: 100%;                  /* Full width */
+    padding: 8px 15px;            /* Comfortable typing */
+    border: 1px solid #0c0c0c;    /* Dark border */
+    border-radius: 3px;           /* Slightly rounded */
+    font-family: "Open Sans", sans-serif;  /* Consistent font */
+    font-size: 1rem;              /* Normal size */
 }
 
-/* Big text box */
+/* Textarea specific styling */
 .form-group textarea {
-    min-height: 150px;
-    resize: none;
+    min-height: 150px;            /* Minimum height */
+    resize: none;                 /* No resizing */
 }
 
-/* Send button spot */
+/* Send button container */
 .send-button-container {
-    margin-top: -1px;
-    text-align: right;
+    margin-top: -1px;             /* Nudge up */
+    text-align: right;            /* Right-aligned */
 }
 
-/* Send button */
+/* Send button styling */
 .send-button {
-    background-color: #222222;
-    color: #c78b07;
+    background-color: #222222;    /* Dark background */
+    color: #c78b07;               /* Gold text */
     border: none;
-    padding: 1px 1px;
-    font-size: 1.9rem;
-    border-radius: 0px;
-    cursor: pointer;
-    transition: all 0.2s;
-    text-transform: capitalize;
-    letter-spacing: normal;
+    padding: 1px 1px;             /* Tight padding */
+    font-size: 1.9rem;            /* Big text */
+    border-radius: 0px;           /* Square corners */
+    cursor: pointer;              /* Shows it's clickable */
+    transition: all 0.2s;         /* Smooth changes */
+    text-transform: capitalize;   /* Proper case */
+    letter-spacing: normal;       /* Normal spacing */
     display: flex;
     width: auto;
     min-width: 0;
-    margin-left: -130px;
-    margin-top: 20px;
-    margin-bottom: 60px;
-    text-align: right;
+    margin-left: -130px;          /* Pull left */
+    margin-top: 20px;             /* Space above */
+    margin-bottom: 60px;          /* Space below */
+    text-align: right;            /* Right-aligned */
     box-sizing: content-box;
-    line-height: 1.2;
+    line-height: 1.2;             /* Tight spacing */
 }
 
-/* Send button hover */
+/* Send button hover effect */
 .send-button:hover {
-    background-color: #c78b07;
-    color: #222222;
+    background-color: #c78b07;    /* Gold background */
+    color: #222222;               /* Dark text */
 }
 
-/* Footer */
+/* 
+   Footer - the bottom of the page 
+   (Where we put all the boring but important stuff)
+*/
 .site-footer {
-    background-color: #222222;
-    padding: 30px 0;
+    background-color: #222222;    /* Dark background */
+    padding: 30px 0;              /* Vertical padding */
 }
 
-/* Footer content */
+/* Footer content container */
 .site-footer .wrapper {
-    text-align: left;
-    max-width: 100%;
-    overflow: hidden;
-    padding: 0 20px;
-    box-sizing: border-box;
+    text-align: left;             /* Left-aligned */
+    max-width: 100%;              /* Full width */
+    overflow: hidden;             /* Just in case */
+    padding: 0 20px;              /* Side padding */
+    box-sizing: border-box;       /* Includes padding in width */
 }
 
+/* Hours section */
 .hours {
     width: 100%;
-    transform: translateY(-50px);
+    transform: translateY(-50px);  /* Nudge up */
 }
   
+/* Hours heading */
 .hours-heading {
-    font-size: 1.8rem;
-    margin-bottom: 20px;
-    font-weight: 800;
-    color: #222222;
-    text-align: left;
+    font-size: 1.8rem;            /* Big text */
+    margin-bottom: 20px;          /* Space below */
+    font-weight: 800;             /* Extra bold */
+    color: #222222;               /* Dark gray */
+    text-align: left;             /* Left-aligned */
 }
 
+/* Hours table */
 .hours-table {
-    width: 100%;
-    min-width: 100%;
-    table-layout: fixed;
-    border-collapse: collapse;
-    margin: 0 auto;
+    width: 100%;                  /* Full width */
+    min-width: 100%;              /* Never smaller */
+    table-layout: fixed;          /* Consistent columns */
+    border-collapse: collapse;    /* No gaps */
+    margin: 0 auto;               /* Centered */
 }
 
+/* Table cells */
 .hours-table th,
 .hours-table td {
-    border: 2px solid #222222;
-    padding: 20px;
-    box-sizing: border-box;
-    text-align: left;
-    font-size: 1.2rem;
-    height: 60px;
+    border: 2px solid #222222;    /* Dark border */
+    padding: 20px;                /* Cell padding */
+    box-sizing: border-box;       /* Includes padding */
+    text-align: left;             /* Left-aligned */
+    font-size: 1.2rem;            /* Text size */
+    height: 60px;                 /* Fixed height */
 }
 
+/* Table headers */
 .hours-table th {
-    background-color: #ffe6ac;
-    font-weight: 700;
-    color: #222222;
-    width: 50%;
-    vertical-align: middle;
+    background-color: #ffe6ac;    /* Light gold */
+    font-weight: 700;             /* Bold */
+    color: #222222;               /* Dark gray */
+    width: 50%;                   /* Half width */
+    vertical-align: middle;       /* Centered vertically */
 }
 
+/* Table cells */
 .hours-table td {
-    width: 50%;
-    vertical-align: middle;
-    font-weight: 600;
+    width: 50%;                   /* Half width */
+    vertical-align: middle;       /* Centered vertically */
+    font-weight: 600;             /* Semi-bold */
 }
+
 /* Footer text */
 .site-footer p {
-    margin-bottom: 8px;
-    font-weight: 600;
-    font-size: 1.1rem;
-    color: #c78b07;
+    margin-bottom: 8px;           /* Space between paragraphs */
+    font-weight: 600;             /* Semi-bold */
+    font-size: 1.1rem;            /* Slightly larger */
+    color: #c78b07;               /* Gold text */
 }
-/* Gold underline */
+
+/* Gold underline for emphasis */
 .underline-yellow {
-  border-bottom: 0.5px solid #c78b07;
+  border-bottom: 0.5px solid #c78b07;  /* Thin gold line */
   display: inline-block;
   line-height: 1;
   padding-bottom: 0;
-  margin-bottom: -3px;
-}
+  margin-bottom: -3px;  
+    }          /* Nudge up */
 
-/* Footer links */
+
+
+
+/* Footer links - make them gold so they stand out */
 .site-footer a {
     color: #c78b07;
     text-decoration: none;
-    transition: color 0.3s;
+    transition: color 0.3s; /* Smooth color change for that nice hover effect */
 }
 
-/* Footer link hover */
+/* When you hover over footer links, they lighten up */
 .site-footer a:hover {
     color: #ffe6ac;
 }
 
-/* Phone styles */
+/* 
+   Mobile Styles - Making everything look good on small screens
+   Because let's face it, everyone's on their phones these days
+*/
 @media (max-width: 760px) {
-    /* Stack header on phones */
-    #logo{float:left;
-    width: 100%;
-
-  }
-    .site-header .wrapper {
-        flex-direction: column;
-        align-items: center;
-        padding: 15px 0;
-    }
-
-    /* Smaller logo on phone */
+    /* Header stack - logo and nav go vertical on small screens */
     #logo {
-        margin-left: 0;
-        height: 60px;
+        float: left;
+        width: 100%; /* Logo takes full width */
+    }
+    
+    /* Center everything in the header */
+    .site-header .wrapper {
+        flex-direction: column; /* Stack vertically */
+        align-items: center; /* Center items */
+        padding: 15px 0; /* Add some padding */
     }
 
-    /* Menu vertical on phone */
+    /* Make the logo a bit smaller on phones */
+    #logo {
+        margin-left: 0; /* Remove left margin */
+        height: 60px; /* Shrink height */
+    }
+
+    /* Switch menu to vertical layout */
     .main-nav ul {
-        flex-direction: column;
-        gap: 15px;
-        transform: none;
+        flex-direction: column; /* Stack menu items */
+        gap: 15px; /* Space between items */
+        transform: none; /* Remove any transforms */
     }
 
-    /* Full width search on phone */
+    /* Make search bar full width */
     .search-bar {
         width: 100%;
-        max-width: 300px;
+        max-width: 300px; /* But not too wide */
     }
 
-    /* Smaller hero on phone */
+    /* Adjust hero section for mobile */
     .hero-section {
-        height: auto;
-        min-height: 400px;
+        height: auto; /* Flexible height */
+        min-height: 400px; /* But not too short */
     }
 
-    /* Adjust hero box on phone */
+    /* Reposition hero text box */
     .hero-overlay-box {
-        margin: 20px;
-        height: auto;
-        padding: 20px;
-         margin-left: -1px
+        margin: 20px; /* Add margin */
+        height: auto; /* Flexible height */
+        padding: 20px; /* Inner padding */
+        margin-left: -1px /* Tiny nudge left */
     }
 
-    /* Fix positions on phone */
+    /* Reset positions for mobile */
     .hero-text-box h1,
     .hero-text-box p,
     .button {
-        left: 0;
-        transform: none;
-        margin-left: 0;
+        left: 0; /* Remove positioning */
+        transform: none; /* Remove transforms */
+        margin-left: 0; /* Reset margin */
     }
 
-    /* Smaller title on phone */
+    /* Make headline smaller on phones */
     .hero-text-box h1 {
-        font-size: 2.5rem;
+        font-size: 2.5rem; /* Smaller font */
     }
 
-    /* Stack flex items on phone */
+    /* Stack flex items vertically */
     .flex-container {
-        flex-direction: column;
+        flex-direction: column; /* Single column */
     }
 
-    /* Full width images on phone */
-     .about-section img {
-    width: 100%; /* full width of container */
-    max-width: none; /* remove any max-width limit */
-    height: auto; /* maintain aspect ratio
-     */
-     margin-left: -1px; /* shifts image 10px to the left */
+    /* Make about section image full width */
+    .about-section img {
+        width: 100%; /* Full width */
+        max-width: none; /* Remove max-width */
+        height: auto; /* Keep proportions */
+        margin-left: -1px; /* Tiny adjustment */
+    }
 
-  }
-
-  .about-section {
-    padding-left: 15px;  /* small left padding for some space */
-    padding-right: 15px; /* keep some right padding */
-    margin-left: 0;      /* remove left margin */
-  }
+    /* Adjust about section padding */
+    .about-section {
+        padding-left: 15px; /* Small left padding */
+        padding-right: 15px; /* Small right padding */
+        margin-left: 0; /* Remove left margin */
+    }
+    
+    /* Tiny adjustment for vision button */
     .button.vision-button {
-    margin-top: -2px;   /* Adjust as needed */
-   
-  }
-    /* Stack services on phone */
+        margin-top: -2px; /* Nudge up slightly */
+    }
+    
+    /* Stack services vertically */
     .service-row {
-        flex-direction: column;
+        flex-direction: column; /* Single column */
     }
 
-    /* Full width buttons on phone */
+    /* Make buttons full width */
     .service-row:first-child .dark-button,
     .service-row:last-child .dark-button {
-        min-width: 100%;
-        transform: none;
+        min-width: 100%; /* Full width */
+        transform: none; /* Remove transforms */
     }
 
-    /* Stack team members on phone */
+    /* Stack team members vertically */
     .team-member,
     .team-member.reverse {
-        flex-direction: column;
+        flex-direction: column; /* Single column */
     }
 
-    /* Full width pics on phone */
-   .team-member:first-child {
-    display: flex;
-    justify-content: flex-start;
-    width: 100%;
-   }
+    /* Adjust first team member layout */
+    .team-member:first-child {
+        display: flex;
+        justify-content: flex-start;
+        width: 100%; /* Full width */
+    }
 
-    /* Full width info on phone */
+    /* Adjust info box positioning */
     .team-member:first-child .member-info {
-    margin-left: 0px; /* adjust value as needed */
-  }
- 
-  .team-member:first-child .member-image {
-    margin-left: -50px; 
-     /* push image fully right */
-    width: 150%;
-   
-  }
-    .team-member.reverse .member-image {
-    width: 300%;
-    margin: 0;
-  }
-    .team-member.reverse .member-info {
-    width: 100%;
-     margin-left: -0.2px; /* shifts info box left */
-  padding-left: 10px; /* adjust padding if needed */
+        margin-left: 0px; /* Reset left margin */
+    }
     
-  }
-
-    /* Full width divider on phone */
-    .title-divider {
-        width: 100%;
+    /* Adjust image positioning */
+    .team-member:first-child .member-image {
+        margin-left: -50px; /* Nudge left */
+        width: 150%; /* Wider than container */
+    }
+    
+    /* Reverse layout adjustments */
+    .team-member.reverse .member-image {
+        width: 300%; /* Extra wide */
+        margin: 0; /* Remove margin */
+    }
+    
+    .team-member.reverse .member-info {
+        width: 100%; /* Full width */
+        margin-left: -0.2px; /* Tiny nudge */
+        padding-left: 10px; /* Small padding */
     }
 
-    /* Stack contact on phone */
+    /* Make divider full width */
+    .title-divider {
+        width: 100%; /* Full width */
+    }
+
+    /* Stack contact form elements */
     .contact-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* Single column */
+    }
+    
+    /* Make form inputs full width */
+    .contact-form .form-group input,
+    .contact-form .form-group textarea {
+        width: 100%; /* Full width */
+        max-width: 70%; /* But not too wide */
     }
 }
-  .contact-form .form-group input,
-  .contact-form .form-group textarea {
-    width: 100%;       /* Make inputs fill container width */
-    max-width: 70%;
-  }
 
-/* Big screen styles */
+/* 
+   Desktop Styles - For those fancy big screens
+   Because some people still use computers, I guess
+*/
 @media (min-width: 760px) {
-    /* Side by side header */
+    /* Side-by-side header layout */
     .site-header .wrapper {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
+        flex-direction: row; /* Horizontal layout */
+        justify-content: space-between; /* Space items */
+        align-items: center; /* Center vertically */
     }
 
     /* Horizontal menu */
     .main-nav ul {
-        flex-direction: row;
-        gap: 30px;
-        transform: translateX(-150px);
+        flex-direction: row; /* Inline menu */
+        gap: 30px; /* Space between items */
+        transform: translateX(-150px); /* Nudge left */
     }
 
-    /* Big title on desktop */
+    /* Big headline for desktop */
     .hero-text-box h1 {
-        font-size: 4rem;
+        font-size: 4rem; /* Large font */
     }
 
-    /* Side by side flex */
+    /* Side-by-side content */
     .flex-container {
-        flex-direction: row;
-        align-items: center;
+        flex-direction: row; /* Horizontal layout */
+        align-items: center; /* Center vertically */
     }
 
-    /* Half width image */
+    /* About image takes half width */
     .about-section img {
-        width: 50%;
+        width: 50%; /* Half width */
     }
 
-    /* Side by side services */
+    /* Side-by-side services */
     .service-row {
-        flex-direction: row;
+        flex-direction: row; /* Horizontal layout */
     }
 
-    /* First service size */
+    /* First service sizing */
     .service-row:first-child .service-card {
-        height: 25%;
+        height: 25%; /* Relative height */
     }
 
-    /* Side by side team */
+    /* Side-by-side team members */
     .team-member {
-        flex-direction: row;
+        flex-direction: row; /* Horizontal layout */
     }
 
     /* Reversed team layout */
     .team-member.reverse {
-        flex-direction: row-reverse;
+        flex-direction: row-reverse; /* Flip order */
     }
 
-    /* Big member pics */
+    /* Larger team member images */
     .member-image img {
-        width: 65%;
-        height: 400px;
+        width: 65%; /* Partial width */
+        height: 400px; /* Fixed height */
     }
 
-    /* Side by side contact */
+    /* Side-by-side contact form */
     .contact-grid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr; /* Two columns */
     }
 }
