@@ -326,16 +326,15 @@ body, html {
    (With that nice yellow background)
 */
 .about-section {
-    padding: 60px 100;
+    padding: 5px 0.5px;
     background-color: #ffe6ac;  /* Light gold/yellow */
-     margin-left: 10px;
+     margin-left: 1px;
 }
 
 /* About title positioning */
 .about-section h2 {
-  margin-left: 20;     
-  margin-top: 0;    
-  transform: translateY(-40px);
+  margin-left: 20;        
+  transform: translateY(-10px);
   transform: translateX(10px);
 }
 
@@ -351,7 +350,7 @@ body, html {
 /* Paragraph spacing */
 .about-content p {
   margin-bottom: 1rem;          /* Space between paragraphs */
-   margin-left: 10px;           /* Small indent */
+   margin-left: 5px;           /* Small indent */
 }
 
 /* Hero button positioning */
@@ -377,13 +376,13 @@ body, html {
 
 /* About us image styling */
 .about-section img {
-  width: 50%;                   /* Half width */
+  width: 70%;                   /* Half width */
   max-width: 500px;             /* But never too big */
   height: auto;                 /* Keeps proportions */
   border-radius: 0px;           /* Square edges */
   box-shadow: none;             /* Flat design */
-  margin-right: -30px;          /* Negative margin for overlap */
-  margin-left: 50px;            /* Push from left */
+  margin-right: -10px;          /* Negative margin for overlap */
+  margin-left: 30px;            /* Push from left */
 }
 
 /* Images in flexbox */
@@ -636,7 +635,7 @@ body, html {
     z-index: 2;
     max-width: 1000px;            /* Reasonable width */
     margin: 0 auto;               /* Centered */
-    padding: -900px 100px 900px 200px;  /* Padding tweaks */
+    padding: -900px ;  /* Padding tweaks */
     text-align: left;             /* Left-aligned */
     margin-top: -70px;            /* Nudge up */
 }
