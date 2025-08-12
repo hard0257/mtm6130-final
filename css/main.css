@@ -1090,7 +1090,11 @@ body, html {
         float: left;
         width: 100%; /* Logo takes full width */
     }
-    
+      .star-word,
+  .media-word {
+    font-size: 1em; /* smaller text */
+    font-weight: normal; /* remove bold */
+  }
     /* Center everything in the header */
     .site-header .wrapper {
         flex-direction: column; /* Stack vertically */
